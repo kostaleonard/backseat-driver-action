@@ -7,9 +7,13 @@ inputs:
   fail-under:
     description: "If specified, exit with non-zero status if the LLM's grade falls below the given value. The value should be one of {'A', 'B', 'C', 'D'}. This value is not inclusive: if this value is 'B' and the LLM gives a final grade of 'B,' then the program will exit with a zero status. If not specified, then the program will exit with a zero status no matter the LLM's grade."
     required: false
+  openai-api-key:
+    description: "The user's OpenAI API key."
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.openai-api-key }}
     - --fail_under=${{ inputs.fail-under }}
     - ${{ inputs.filenames }}

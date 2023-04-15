@@ -9,4 +9,5 @@ jobs:
       - name: Run the action
         uses: ./
         with:
-          filenames: 'entry.py **/*.py'
+          filenames: '**/*.py'
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
