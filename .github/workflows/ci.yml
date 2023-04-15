@@ -9,4 +9,6 @@ jobs:
       - name: Run the action
         uses: ./
         with:
-          filenames: entry.py **/*.py
+          filenames:
+           - 'entry.py'
+           - '**/*.py'
