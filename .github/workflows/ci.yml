@@ -9,4 +9,4 @@ jobs:
       - name: Run the action
         uses: ./
         with:
-          filenames: 'tests/fixtures/sample_source_file.py'
+          filenames: '**/*.py'
