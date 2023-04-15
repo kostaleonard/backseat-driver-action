@@ -11,5 +11,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ "" if not inputs.fail-under else "--fail_under" + inputs.fail-under }}
+    - ${{ '' if inputs.fail-under is not defined else '--fail_under ' + inputs.fail-under }}
     - ${{ inputs.filenames }}
