@@ -15,5 +15,5 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.openai-api-key }}
-    - '--fail_under='${{ inputs.fail-under }}
+    - '--fail_under=${{ inputs.fail-under }}'
     - ${{ inputs.filenames }}
