@@ -1,3 +1,0 @@
-#!/bin/sh
-
-backseat-driver $@
