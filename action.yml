@@ -7,9 +7,6 @@ inputs:
   fail-under:
     description: "If specified, exit with non-zero status if the LLM's grade falls below the given value. The value should be one of {'A', 'B', 'C', 'D'}. This value is not inclusive: if this value is 'B' and the LLM gives a final grade of 'B,' then the program will exit with a zero status. If not specified, then the program will exit with a zero status no matter the LLM's grade."
     required: false
-outputs:
-  grade:
-    description: "The language model's code review grade."
 runs:
   using: 'docker'
   image: 'Dockerfile'
