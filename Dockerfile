@@ -1,4 +1,4 @@
 FROM python:3.10-alpine
-COPY entry.py entry.py
+COPY entry.sh entry.sh
 RUN pip install backseat-driver==0.0.2
-ENTRYPOINT ["python", "entry.py"]
+ENTRYPOINT ["entry.sh"]

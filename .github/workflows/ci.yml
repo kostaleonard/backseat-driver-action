@@ -10,3 +10,4 @@ jobs:
         uses: ./
         with:
           filenames: '**/*.py'
+          fail-under: 'D'
