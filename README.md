@@ -16,10 +16,15 @@ for more details.
 
 ### Example
 
+Include the following code in your GitHub Workflow `.yml` file.
+Adjust the parameters as necessary to fit your use case.
+
 ```yaml
-uses: actions/backseat-driver-action@v1
-with:
-  openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-  filenames: '**/*.py'
-  fail-under: B
+- uses: actions/checkout@v3
+- name: Run Backseat Driver on this repository
+  uses: kostaleonard/backseat-driver-action@v2
+  with:
+    openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+    filenames: '**/*.py'
+    fail-under: B
 ```
