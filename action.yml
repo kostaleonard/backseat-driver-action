@@ -1,5 +1,8 @@
 name: 'Backseat Driver'
 description: 'Requests code review from a large language model.'
+branding:
+  icon: truck
+  color: purple
 inputs:
   filenames:
     description: 'The files to pass to the LLM for code review as a space-separated list. Each value can be a file or a blob-style path.'
